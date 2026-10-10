@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VRX TOOL™</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #070713;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: #0c0c14;
+      border-radius: 25px;
+      padding: 40px 30px;
+      text-align: center;
+      width: 100%;
+      max-width: 320px;
+      box-shadow: 0 0 40px rgba(128, 0, 255, 0.25);
+      border: 1px solid rgba(155, 92, 255, 0.15);
+    }
+
+    .title {
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      font-size: 22px;
+      line-height: 1.4;
+      color: #9b5cff;
+    }
+
+    .timer {
+      font-size: 58px;
+      font-weight: bold;
+      color: #9b5cff;
+      text-shadow: 0 0 20px #9b5cff, 0 0 40px rgba(155, 92, 255, 0.5);
+      margin: 20px 0;
+    }
+
+    .status-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #111120;
+      border-radius: 20px;
+      padding: 10px 12px;
+      color: #aaa;
+      font-size: 12px;
+      margin-bottom: 25px;
+      letter-spacing: 0.5px;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      background: #9b5cff;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 10px #9b5cff;
+      transition: opacity 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-main {
+      display: block;
+      text-decoration: none;
+      background: linear-gradient(90deg, #7b4bff, #c86cff);
+      color: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 0 20px rgba(155, 92, 255, 0.6);
+      transition: transform 0.2s ease;
+    }
+
+    .btn-main:active {
+      transform: scale(0.98);
+    }
+
+    .agency-wrap {
+      margin-top: 28px;
+    }
+
+    .agency-text {
+      color: #9a9ab0;
+      font-size: 12px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-agency {
+      display: inline-block;
+      text-decoration: none;
+      background: rgba(155, 92, 255, 0.12);
+      color: #c86cff;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: bold;
+      border: 1px solid rgba(155, 92, 255, 0.25);
+      box-shadow: 0 0 12px rgba(155, 92, 255, 0.18);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2 class="title">𝗩𝗥𝗫 𝗧𝗢𝗢𝗟™</h2>
+
+    <div id="timer" class="timer">5</div>
+
+    <div class="status-bar">
+      <span id="dot" class="status-dot"></span>
+      ANALYZING VIP MARKET PATTERNS
+    </div>
+
+    <a href="https://t.me/+-7DeeYXMXzU1MDll" target="_blank" class="btn-main">
+      JOIN NOW FREE
+    </a>
+
+    <div class="agency-wrap">
+      <p class="agency-text">For Ads Setup Contact This</p>
+      <a href="https://t.me/+kywE1vqa2zM0MjI9" target="_blank" class="btn-agency">
+        Contact Agency
+      </a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var timeLeft = 5;
+      var timer = document.getElementById('timer');
+      var dot = document.getElementById('dot');
+
+      var countdown = setInterval(function () {
+        timeLeft--;
+        if (timer) timer.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+          clearInterval(countdown);
+          window.location.href = 'https://t.me/+-7DeeYXMXzU1MDll';
+        }
+      }, 1000);
+
+      var on = true;
+      setInterval(function () {
+        if (!dot) return;
+        dot.style.opacity = on ? '0.5' : '1';
+        dot.style.boxShadow = on ? '0 0 18px #9b5cff' : '0 0 8px #9b5cff';
+        on = !on;
+      }, 700);
+    })();
+  </script>
+</body>
+</html>
